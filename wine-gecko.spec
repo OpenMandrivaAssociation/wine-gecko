@@ -20,6 +20,7 @@ Group:		Emulators
 License:	MPLv1.1
 URL:		http://wiki.winehq.org/Gecko
 Source:		http://downloads.sourceforge.net/wine/%{oname}-%{version}-x86.cab
+BuildRoot:	%{_tmppath}/%{name}-root
 ExclusiveArch:	%ix86
 Requires:	wine
 
