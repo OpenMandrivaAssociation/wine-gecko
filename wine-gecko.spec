@@ -1,7 +1,7 @@
 
 %define name	wine-gecko
 %define oname	wine-mozilla
-%define version	1.2.0
+%define version	1.3
 %define rel	1
 
 # random working revision from mingw-w64 trunk:
@@ -54,6 +54,7 @@ BuildRequires:	zip
 BuildRequires:	glib2-devel
 BuildRequires:	libIDL-devel
 BuildRequires:	x11-proto-devel
+BuildRequires:	yasm
 # for msi package generation
 BuildRequires:	wine-bin
 # for gcc
@@ -156,3 +157,6 @@ rm -rf %{buildroot}
 %doc wine-mozilla/toolkit/content/license.html
 %dir %{_datadir}/wine/gecko
 %{_datadir}/wine/gecko/*.msi
+
+
+%changelog
