@@ -1,7 +1,7 @@
 
 %define name	wine-gecko
 %define oname	wine-mozilla
-%define version	1.3
+%define version	1.4
 %define rel	1
 
 # random working revision from mingw-w64 trunk:
