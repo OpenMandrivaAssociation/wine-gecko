@@ -1,0 +1,6 @@
+sources:
+  "binutils-2.22.tar.bz2:"	65b304a0b9a53a686ce50a01173d1f40f8efe404
+  "gcc-4.6.3.tar.bz2:"	ce317ca5c8185b58bc9300182b534608c578637f
+  "mingw-w64-crt-svn4705.tar.bz2:"	74043b6e428474b2fb40e69a76a3947e37789081
+  "mingw-w64-headers-svn4705.tar.bz2:"	521436a7b073eac001b1fa60fcd51ca9d90755ec
+  "wine-mozilla-1.4-src.tar.bz2:"	11900bd2e16bacafa44c5ee80ff7ba71b57cc977
