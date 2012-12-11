@@ -1,0 +1,11 @@
+--- comm-beta/mozilla/configure.in.system-python-virtualenv	2012-07-23 00:44:57.425071929 +0200
++++ comm-beta/mozilla/configure.in	2012-07-23 01:30:58.838726848 +0200
+@@ -8838,7 +8838,7 @@
+ AC_MSG_RESULT([Creating Python virtualenv])
+ rm -rf _virtualenv
+ mkdir -p _virtualenv
+-MACOSX_DEPLOYMENT_TARGET= PYTHONDONTWRITEBYTECODE= $PYTHON $_topsrcdir/other-licenses/virtualenv/virtualenv.py --system-site-packages ./_virtualenv
++MACOSX_DEPLOYMENT_TARGET= PYTHONDONTWRITEBYTECODE= virtualenv --system-site-packages ./_virtualenv
+ case "$host_os" in
+ mingw*)
+     PYTHON=$MOZ_BUILD_ROOT/_virtualenv/Scripts/python.exe

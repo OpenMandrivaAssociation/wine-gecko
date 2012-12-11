@@ -1,6 +1,9 @@
 sources:
-  "binutils-2.22.tar.bz2:"	65b304a0b9a53a686ce50a01173d1f40f8efe404
-  "gcc-4.6.3.tar.bz2:"	ce317ca5c8185b58bc9300182b534608c578637f
-  "mingw-w64-crt-svn4705.tar.bz2:"	74043b6e428474b2fb40e69a76a3947e37789081
-  "mingw-w64-headers-svn4705.tar.bz2:"	521436a7b073eac001b1fa60fcd51ca9d90755ec
-  "wine-mozilla-1.4-src.tar.bz2:"	11900bd2e16bacafa44c5ee80ff7ba71b57cc977
+  "gcc-linaro-4.7-2012.10.tar.bz2": 6dcd985f46430d157b2b66ef2a1558279c961da3
+  "mingw-w64-crt-svn4156.tar.bz2": 7d46be47e7ef697823cc369517011d1e7934ab3a
+  "mingw-w64-headers-svn4156.tar.bz2": 3e409b50cef9cb1f54b3e6554869ab16a2ea45b0
+  "wine-mozilla-1.3-src.tar.bz2": b1aa618e0188330762259e6debff09f7a68d336e
+  wine-mozilla-1.8-src.tar.bz2: c8a3dedb6914c391bef282c210b6f4a38958bee1
+  mingw-w64-headers-svn5421.tar.bz2: 15beae5e3dc20ff718e9b6b50ae977322b8d3f53
+  mingw-w64-crt-svn5421.tar.bz2: d119235eecca7713fee5b322fc42d3b9390d634c
+  binutils-2.22.52.0.4.tar.bz2: ec456b0c2a91c4672f5129e37f775fa87dd4dd85
