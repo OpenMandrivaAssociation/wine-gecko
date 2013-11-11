@@ -125,8 +125,8 @@ export CXXFLAGS="$CFLAGS"
 # Make sure nothing leaks outside build dir:
 export WINEPREFIX="$builddir/wine-prefix"
 
-sed -i -e 's/@colophon/@@colophon/' \
-       -e 's/doc@cygnus.com/doc@@cygnus.com/' binutils-%{binutils_version}/bfd/doc/bfd.texinfo
+#sed -i -e 's/@colophon/@@colophon/' \
+#       -e 's/doc@cygnus.com/doc@@cygnus.com/' binutils-%{binutils_version}/bfd/doc/bfd.texinfo
 
 cd binutils-build
 ../binutils-%{binutils_version}/configure --prefix=$builddir/mingw-sysroot --target=%mingw_host --disable-multilib
