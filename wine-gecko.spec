@@ -4,9 +4,9 @@
 %define version	2.24
 %define rel	1
 
-%define mingw64_snap	5421
+%define mingw64_snap	5876
 %define binutils_version 2.23.2
-%define gcc_version linaro-4.7-2012.10
+%define gcc_version linaro-4.7-2013.10
 
 # See:
 # http://wiki.winehq.org/Gecko
@@ -63,6 +63,7 @@ BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	python-setuptools
 BuildRequires:	python-virtualenv
+BuildRequires:	texinfo
 
 # for msi package generation
 BuildRequires:	wine-bin
@@ -94,10 +95,6 @@ This package is for use with 64-bit wine64.
 %setup -q -c -a1 -a2 -a3 -a4
 ln -s wine-mozilla-%version wine-mozilla
 
-cd wine-mozilla
-#patch0 -p2
-cd ..
-
 # NOTE: any deviations from wine/README below are only there to make the
 # package build successfully. If something seems to be unnecessary, it is ok
 # to drop it.
@@ -110,11 +107,6 @@ sed -i 's,cross_compiling=.*$,cross_compiling=yes,' wine-mozilla/nsprpub/configu
 %build
 builddir=$PWD
 
-cd wine-mozilla
-# for virtualenv patch
-autoconf-2.13
-cd ..
-
 mkdir -p binutils-build gcc-build
 mkdir -p mingw-headers-build mingw-crt-build
 
@@ -125,8 +117,8 @@ export CXXFLAGS="$CFLAGS"
 # Make sure nothing leaks outside build dir:
 export WINEPREFIX="$builddir/wine-prefix"
 
-#sed -i -e 's/@colophon/@@colophon/' \
-#       -e 's/doc@cygnus.com/doc@@cygnus.com/' binutils-%{binutils_version}/bfd/doc/bfd.texinfo
+sed -i -e 's/@colophon/@@colophon/' \
+       -e 's/doc@cygnus.com/doc@@cygnus.com/' binutils-%{binutils_version}/bfd/doc/bfd.texinfo
 
 cd binutils-build
 ../binutils-%{binutils_version}/configure --prefix=$builddir/mingw-sysroot --target=%mingw_host --disable-multilib
