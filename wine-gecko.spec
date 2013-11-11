@@ -96,7 +96,7 @@ This package is for use with 64-bit wine64.
 ln -s wine-mozilla-%version wine-mozilla
 
 cd wine-mozilla
-%patch0 -p2
+#patch0 -p2
 cd ..
 
 # NOTE: any deviations from wine/README below are only there to make the
