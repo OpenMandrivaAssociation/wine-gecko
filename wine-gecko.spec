@@ -1,11 +1,11 @@
 %define	debug_package	%nil
 %define name	wine-gecko
 %define oname	wine-mozilla
-%define version	1.8
+%define version	2.24
 %define rel	1
 
 %define mingw64_snap	5421
-%define binutils_version 2.22.52.0.4
+%define binutils_version 2.23.2
 %define gcc_version linaro-4.7-2012.10
 
 # See:
@@ -32,7 +32,7 @@
 Summary:	HTML engine for Wine based on Gecko
 Name:		%{name}
 Version:	%{version}
-Release:	%mkrel %{rel}
+Release:	%{rel}
 Group:		Emulators
 License:	MPLv1.1
 URL:		http://wiki.winehq.org/Gecko
