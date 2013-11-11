@@ -59,7 +59,6 @@ BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	libIDL-devel
 BuildRequires:	x11-proto-devel
 BuildRequires:	yasm
-BuildRequires:	texinfo
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	python-setuptools
