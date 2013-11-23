@@ -51,6 +51,7 @@ Source3:	http://ftp.gnu.org/gnu/binutils/binutils-%{binutils_version}.tar.bz2
 Source4:	http://gcc.fyxm.net/releases/gcc-%{gcc_version}/gcc-%{gcc_version}.tar.bz2
 # Fix mozilla build with mga multiarch (patch by cjw)
 Patch0:		iceape-2.12-system-virtualenv.patch
+Patch1:		mingw-wine-gecko-mozconfig.patch
 ExclusiveArch:	%ix86 x86_64
 Requires:	wine32
 BuildRequires:	autoconf2.1
@@ -95,14 +96,16 @@ This package is for use with 64-bit wine64.
 %setup -q -c -a1 -a2 -a3 -a4
 ln -s wine-mozilla-%version wine-mozilla
 
+cd wine-mozilla
+%patch1 -p1
+cd ..
+
 # NOTE: any deviations from wine/README below are only there to make the
 # package build successfully. If something seems to be unnecessary, it is ok
 # to drop it.
 
-%ifarch %ix86
 # Fixes build - for some strange reason the detection fails here:
 sed -i 's,cross_compiling=.*$,cross_compiling=yes,' wine-mozilla/nsprpub/configure
-%endif
 
 %build
 builddir=$PWD
@@ -156,6 +159,12 @@ ln -s %{_bindir}/wine64 $builddir/mingw-sysroot/bin/wine
 %endif
 
 cd wine-mozilla
+
+cp wine/mozconfig-common wine/mozconfig-common.build
+
+echo "export CFLAGS=\"-DWINE_GECKO_SRC\"" >> wine/mozconfig-common
+echo "export CXXFLAGS=\"\$CFLAGS -fpermissive\"" >> wine/mozconfig-common
+
 MAKEOPTS="%_smp_mflags" wine/make_package \
 %ifarch x86_64
 	-win64
