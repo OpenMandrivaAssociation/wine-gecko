@@ -4,7 +4,7 @@
 %define version	2.24
 %define rel	1
 
-%define mingw64_snap	5876
+%define mingw64_snap	6383
 %define binutils_version 2.23.2
 %define gcc_version linaro-4.7-2013.10
 

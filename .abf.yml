@@ -1,6 +1,6 @@
 sources:
   "gcc-linaro-4.7-2013.10.tar.bz2": 869fbae99e2a40251a68a3078e9b01852b3757b0
   wine-mozilla-2.24-src.tar.bz2: 4d5ed0e6be1cdd78ee7674133f5119c0ced75025
-  mingw-w64-headers-svn5876.tar.bz2: c685ae3c3fcad8cfdd1176d741c311472f4ec63c
-  mingw-w64-crt-svn5876.tar.bz2: bf6c3a9a6aa755f82a810c226e7d8cd94129728b
+  mingw-w64-headers-svn6383.tar.bz2: 933cf60a2c027c778b3bdb742590b8e238552972
+  mingw-w64-crt-svn6383.tar.bz2: 96dc14cee2472abe65669dc2f841895e8c9712e9
   binutils-2.23.2.tar.bz2: 042c51073205ebaf88c272d6168f9deb71984b56
