@@ -35,7 +35,7 @@ Version:	%{version}
 Release:	%{rel}
 Group:		Emulators
 License:	MPLv1.1
-URL:		http://wiki.winehq.org/Gecko
+URL:		https://wiki.winehq.org/Gecko
 Source0:	http://downloads.sourceforge.net/wine/%{oname}-%{version}-src.tar.bz2
 # URL=http://mingw-w64.svn.sourceforge.net/svnroot/mingw-w64/trunk
 # REV=$(svn info $URL | sed -n 's,^Last Changed Rev: ,,p')
