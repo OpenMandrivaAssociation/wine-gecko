@@ -54,6 +54,7 @@ Patch0:		iceape-2.12-system-virtualenv.patch
 Patch1:		mingw-wine-gecko-mozconfig.patch
 ExclusiveArch:	%ix86 x86_64
 Requires:	wine32
+BuildRequires:	make
 BuildRequires:	autoconf2.1
 BuildRequires:	zip
 BuildRequires:	pkgconfig(glib-2.0)
